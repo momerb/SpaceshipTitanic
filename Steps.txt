@@ -1,0 +1,35 @@
+Steps:
+
+- Concat Train and Test dataset
+
+- Delete the 'Name' column
+
+- Devide 'Cabin' into 3 parts and remove 'CabinNum' column
+
+- Separate the 'PassengerId' column into 'PassengerGroup' and 'PassengerGroupId' and then delete the 'PassengerGroupId'
+
+- Sum the 5 columns to a new column named 'MoneySpent' and remove these 5 columns
+
+- Add a new column named 'CryoSleepValueAvail' and add TRUE if Cyrosleep value is available and FALSE if Cyrosleep value is not available
+
+- Add FALSE to 'CryoSleep' and 'VIP' for None values
+
+- Add a new column named 'HomePlanetValueAvail' and add TRUE if 'HomePlanet' value is available otherwise FALSE
+
+- Add 'Europa' for None
+
+- Add a new Column named 'CabinValueAvail' and add TRUE if 'CabinSide' value is available otherwise FALSE
+
+- Put values of 'CabinDeck' and 'CabinSide' if the values in 'PassengerGroup' is repeating, considering that the people who belongs to the same group, had the higher probability of be on the same 'CabinDeck' bzw. same 'CabinSide'. For not repeating 'PassengerGroup' put "F" in 'CabinDeck' and "S" in the 'CabinSide'.
+
+- Drop the 'PassengerGroup'
+
+- Put "TRAPPIST-1e" to the None values in 'Destination'
+
+- Add the Median Age to missing values in 'Age' which should be around 27
+
+- Add MinMax Scale on 'Age' and 'MoneySpent'
+
+- Convert TRUE to 1 and FALSE to 0 for ['CryoSleep', 'VIP', 'Transported', 'CryoSleepValueAvail', 'HomePlanetValueAvail', 'CabinValueAvail'] and for NaN values keep the same
+
+
